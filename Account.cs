@@ -6,12 +6,10 @@ namespace Zaliczenie
 {
     class Account
     {
-        public string log, password;
-        public string name;
+        public string log, password, name;
         public bool status;
         public double stan = 0;
-        public bool isAdmin;
-        public bool isLoggged;
+        public bool isAdmin, isLoggged;
 
         public Account(string name, string log, string password, bool status, bool isAdmin)
         {
@@ -38,7 +36,6 @@ namespace Zaliczenie
             do
             {
                 choice = Console.ReadLine();
-
                 switch (choice)
                 {
                     case "1":
@@ -51,7 +48,7 @@ namespace Zaliczenie
                         Console.WriteLine(this);
                         break;
                     case "4":
-                        Console.WriteLine("Wpisz nazwę komputera do któego chcesz przesłac pieniądze");
+                        Console.WriteLine("Wpisz nazwę konta do którego chcesz przesłac pieniądze");
                         string accountName = Console.ReadLine();
                         Console.WriteLine("Ile chcesz przelać?");
                         int money = Int32.Parse(Console.ReadLine());
