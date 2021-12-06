@@ -7,11 +7,7 @@ namespace Zaliczenie
     class Admin : Account
     {
         List<Account> listOfUsers = Program.accounts;
-        public Admin(string name, string log, string password, bool status, bool isAdmin) : base(name, log, password, status, isAdmin)
-        {
-
-        }
-
+        public Admin(string name, string log, string password, bool status, bool isAdmin) : base(name, log, password, status, isAdmin) { }
         public override void Menu()
         {
             Console.WriteLine("(1) Zablokuj konto");
@@ -58,7 +54,6 @@ namespace Zaliczenie
                 }
             }
         }
-
         public void AddAccount()
         {
             string name, username, password;
@@ -71,7 +66,6 @@ namespace Zaliczenie
 
             listOfUsers.Add(new Account(name, username, password, false, false));
         }
-
         public void MakeSummary()
         {
             double sum = 0;
